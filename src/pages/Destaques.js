@@ -7,10 +7,10 @@ export default function Menu ({navigation}) {
        
     return(
         <KeyboardAvoidingView style={styles.backgroud}>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Categoria!</Text>
-            </View>
-        </KeyboardAvoidingView>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>Destaques!</Text>
+        </View>
+    </KeyboardAvoidingView>
     );
 }
 

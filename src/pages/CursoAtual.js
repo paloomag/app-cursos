@@ -7,9 +7,19 @@ export default function Menu ({navigation}) {
        
     return(
         <KeyboardAvoidingView style={styles.backgroud}>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Categoria!</Text>
+        {/*   
+            <StatusBarColor hidden={true}/> */}
+
+            <View style={styles.centerlogo}>
+                <Image style={styles.logo} source={require('../img/Logo.png')}/>
             </View>
+
+
+
+            <View style={styles.footer}>
+                <Text  style={styles.textfooter} >Copyright © Clinitec 2020</Text>
+            </View>
+
         </KeyboardAvoidingView>
     );
 }
