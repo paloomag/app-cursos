@@ -1,53 +1,18 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { View, Text, KeyboardAvoidingView, StyleSheet, Image} from 'react-native';
+import { View, Text, KeyboardAvoidingView, StyleSheet, Image, SafeAreaView} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-/* import StatusBarColor from '../components/StatusBarColor' */
 import api from '../services/API';
 import { IconButton } from 'react-native-paper';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import Destaques from './Destaques';
-import CursoAtual from './CursoAtual';
-import Categoria from './Categoria';
-
-const Tab = createMaterialBottomTabNavigator();
-
+import MyTabs from './MyTabs';
 
 export default function Menu ({navigation}) {
        
     return(
-        <KeyboardAvoidingView style={styles.backgroud}>
-        
-            <View style={styles.nav}>
-                <Image style={styles.logo} source={require('../img/Logo.png')}/>
-                <IconButton 
-                icon="camera" color="white" style={styles.iconuser} />         
-            </View>
-
-            <View style={styles.viewSearch}>
-                <TextInput
-                style={styles.input}
-                placeholder="Procurar"
-                autoCorrect={false}
-                autoCapitalize="none"
-                />
-                <TouchableOpacity style={styles.icon}>
-                    <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={26} /> 
-                </TouchableOpacity>
-            </View>
-
-            <View style={styles.footer}>
-                <Text  style={styles.textfooter} >Copyright © Clinitec 2020</Text>
-            </View>
-                <Tab.Navigator>
-                    <Tab.Screen name="Destaques" component={Destaques} />
-                    <Tab.Screen name="CursoAtual" component={CursoAtual} />
-                    <Tab.Screen name="Categoria" component={Categoria} />
-                </Tab.Navigator>     
-        </KeyboardAvoidingView>
-        
+        <SafeAreaView style={styles.backgroud}>
+            <MyTabs/>
+        </SafeAreaView>
     );
 }
 
@@ -97,17 +62,5 @@ const styles = StyleSheet.create({
         right: 20,
         top: 10,
     },  
-    footer:{
-        alignItems:'center',
-        position:'absolute',
-        bottom:0,
-        backgroundColor:'#F1F1F1',
-        width:'100%',
-        height:'5%',
-        justifyContent:'center',
-    },
-textfooter:{
-    color:'black',
-},
 
 });

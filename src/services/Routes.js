@@ -7,6 +7,7 @@ import Login from '../pages/Login';
 import Curso from '../pages/Curso';
 import TodosCursos from '../pages/TodosCursos';
 import Categoria from '../pages/Categoria';
+import MyTabs from '../pages/MyTabs';
 
 export default function Routes() {
     const Stack = createStackNavigator();
@@ -18,6 +19,7 @@ export default function Routes() {
                 <Stack.Screen name="Curso" component={Curso}/>
                 <Stack.Screen name="TodosCursos" component={TodosCursos}/>
                 <Stack.Screen name="Categoria" component={Categoria}/>
+                <Stack.Screen name="MyTabs" component={MyTabs}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
