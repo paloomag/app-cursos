@@ -32,6 +32,7 @@ export default function Menu ({navigation}) {
                     <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={26} /> 
                 </TouchableOpacity>
             </View>
+
             <Tab.Navigator
              barStyle={{ backgroundColor: 'rgb(45,77,118)' }}
              shifting={true}>
@@ -43,6 +44,7 @@ export default function Menu ({navigation}) {
                       <MaterialCommunityIcons name="star-outline" color={color} size={26} />
                     ),
                   }} />
+
                 <Tab.Screen name="CursoAtual" 
                 component={CursoAtual} 
                  options={{
@@ -51,6 +53,7 @@ export default function Menu ({navigation}) {
                       <MaterialCommunityIcons name="play-circle-outline" color={color} size={26} />
                     ),
                   }} />
+                  
                 <Tab.Screen name="Categoria" 
                 component={Categoria}
                 options={{
