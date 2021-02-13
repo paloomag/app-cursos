@@ -12,7 +12,7 @@ export default function Routes() {
     const Stack = createStackNavigator();
     return(
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Curso" screenOptions={{headerShown: false}}>
+            <Stack.Navigator initialRouteName="Categoria" screenOptions={{headerShown: false}}>
                 <Stack.Screen name="Menu" component={Menu}/>
                 <Stack.Screen name="Login" component={Login}/>
                 <Stack.Screen name="Curso" component={Curso}/>

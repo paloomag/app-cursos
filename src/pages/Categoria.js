@@ -77,7 +77,7 @@ export default function Categoria ({navigation}) {
 
                     </ScrollView>
 
-                    <Text style={styles.tituloDestaque}>  </Text> 
+                    <Text style={styles.tituloDestaque}> Redes </Text> 
                     
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.scrollImage}>
 
