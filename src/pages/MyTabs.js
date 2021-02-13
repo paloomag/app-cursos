@@ -15,6 +15,7 @@ export default function Menu ({navigation}) {
        
     return(
         <SafeAreaView style={styles.backgroud}>
+
              <View style={styles.nav}>
                 <Image style={styles.logo} source={require('../img/Logo.png')}/>
                 <IconButton 
@@ -29,7 +30,7 @@ export default function Menu ({navigation}) {
                 autoCapitalize="none"
                 />
                 <TouchableOpacity style={styles.icon}>
-                    <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={26} /> 
+                    <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={20} /> 
                 </TouchableOpacity>
             </View>
 

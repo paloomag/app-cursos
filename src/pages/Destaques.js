@@ -10,7 +10,7 @@ export default function Destaque ({navigation}) {
         <KeyboardAvoidingView style={styles.backgroud}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={styles.tituloDestaque}><MaterialCommunityIcons name="new-box" color="#FF872D" size={26} /> Novos Cursos   </Text> 
-                <ScrollView horizontal={true}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.scrollImage}>
                 
                     {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
                     
@@ -48,7 +48,7 @@ export default function Destaque ({navigation}) {
 
                 <Text style={styles.tituloDestaque}><MaterialCommunityIcons name="lightbulb-on" color="#FF872D" size={22} /> Veja também   </Text> 
                 
-                <ScrollView horizontal={true}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.scrollImage}>
 
                     {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
                     
@@ -117,6 +117,9 @@ textArea:{
 },
 tituloDestaque:{
     fontSize:18,
+},
+scrollImage:{
+    marginLeft:10,
 },
 footer:{
     alignItems:'center',
