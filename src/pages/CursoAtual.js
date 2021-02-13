@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, KeyboardAvoidingView, StyleSheet, Image, SafeAreaView} from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { List } from 'react-native-paper';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import api from '../services/API';
 
 export default function CursoAtual ({navigation}) {
