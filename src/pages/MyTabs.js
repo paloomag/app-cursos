@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {Image, KeyboardAvoidingView, SafeAreaView, StyleSheet, View} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, View} from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Destaques from './Destaques';
 import CursoAtual from './CursoAtual';
@@ -15,11 +15,10 @@ export default function Menu ({navigation}) {
        
     return(
         <SafeAreaView style={styles.backgroud}>
-
-             <View style={styles.nav}>
+            <View style={styles.nav}>
                 <Image style={styles.logo} source={require('../img/Logo.png')}/>
                 <IconButton 
-                icon="account-circle" color="white" style={styles.iconuser} />         
+                icon="account-circle" color="white" style={styles.iconuser} onPress={() => navigation.navigate('Login')}  />         
             </View>
 
             <View style={styles.viewSearch}>
@@ -33,7 +32,6 @@ export default function Menu ({navigation}) {
                     <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={20} /> 
                 </TouchableOpacity>
             </View>
-
             <Tab.Navigator
              barStyle={{ backgroundColor: 'rgb(45,77,118)' }}
              shifting={true}>

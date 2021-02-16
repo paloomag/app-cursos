@@ -95,7 +95,7 @@ export default function Login ({navigation}) {
 
                 <TouchableOpacity 
                     style={styles.botao}
-                    onPress={handleLogin}>
+                    onPress={() => navigation.navigate('Menu')} >
                     <Text style={styles.textobotao}>Entrar</Text>
                 </TouchableOpacity>
 

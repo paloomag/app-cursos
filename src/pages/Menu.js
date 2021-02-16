@@ -62,5 +62,4 @@ const styles = StyleSheet.create({
         right: 20,
         top: 10,
     },  
-
 });

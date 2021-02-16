@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, KeyboardAvoidingView, StyleSheet, TextInput, TouchableOpacity, Image } from 'react-native';
+import { View, Text, KeyboardAvoidingView, StyleSheet, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ScrollView } from 'react-native-gesture-handler';
 import { IconButton, List } from 'react-native-paper';
@@ -11,23 +11,24 @@ export default function Curso ({navigation}) {
        
     return(
         <KeyboardAvoidingView style={styles.backgroud}>
-                <View style={styles.nav}>
-                    <Image style={styles.logo} source={require('../img/Logo.png')}/>
-                    <IconButton 
-                    icon="account-circle" color="white" style={styles.iconuser} />         
-                </View>
+            <View style={styles.nav}>
+                <Image style={styles.logo} source={require('../img/Logo.png')}/>
+                <IconButton 
+                icon="account-circle" color="white" style={styles.iconuser} onPress={() => navigation.navigate('Login')} />         
+            </View>
 
-                <View style={styles.viewSearch}>
-                    <TextInput
-                    style={styles.input}
-                    placeholder="Procurar"
-                    autoCorrect={false}
-                    autoCapitalize="none"
-                    />
-                    <TouchableOpacity style={styles.icon}>
-                        <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={20} /> 
-                    </TouchableOpacity>
-                </View>
+            <View style={styles.viewSearch}>
+                <TextInput
+                style={styles.input}
+                placeholder="Procurar"
+                autoCorrect={false}
+                autoCapitalize="none"
+                />
+                <TouchableOpacity style={styles.icon}>
+                    <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={20} /> 
+                </TouchableOpacity>
+            </View>
+            <ImageBackground source={require('../img/back2.jpg')} style={styles.backgroundImage}>
                 <View>
                     <Text style={styles.tituloDestaque}> Título do curso </Text>
                     <Video
@@ -50,7 +51,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>1</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -58,7 +59,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>2</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -66,7 +67,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>3</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -74,7 +75,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>4</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -82,7 +83,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>5</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -90,7 +91,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>6</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -98,7 +99,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>7</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -106,7 +107,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>8</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -114,7 +115,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>9</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -122,7 +123,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>10</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -130,7 +131,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>11</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -138,7 +139,7 @@ export default function Curso ({navigation}) {
                     left={props =><Text style={styles.numberList}>12</Text>}
                     right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
-                     <List.Item
+                    <List.Item
                     title='Titulo Exemplo'
                     description='Video - 05:00 minutos'
                     style={styles.itemList}
@@ -148,6 +149,7 @@ export default function Curso ({navigation}) {
                     />
 
                 </ScrollView>
+            </ImageBackground>     
        </KeyboardAvoidingView>         
     );
 }
@@ -158,7 +160,10 @@ backgroud:{
     width:'100%',
     height:'100%',
 },
-
+backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover', // or 'stretch'
+},
 nav:{
     alignItems:'center',
     justifyContent: 'center',
@@ -207,6 +212,7 @@ backgroundVideo: {
     alignSelf: 'center',
     width:350,
     height: 150,
+    marginBottom:30,
   },
 imgCurso:{
     width:150,
