@@ -15,23 +15,6 @@ export default function Menu ({navigation}) {
        
     return(
         <SafeAreaView style={styles.backgroud}>
-            <View style={styles.nav}>
-                <Image style={styles.logo} source={require('../img/Logo.png')}/>
-                <IconButton 
-                icon="account-circle" color="white" style={styles.iconuser} onPress={() => navigation.navigate('Login')}  />         
-            </View>
-
-            <View style={styles.viewSearch}>
-                <TextInput
-                style={styles.input}
-                placeholder="Procurar"
-                autoCorrect={false}
-                autoCapitalize="none"
-                />
-                <TouchableOpacity style={styles.icon}>
-                    <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={20} /> 
-                </TouchableOpacity>
-            </View>
             <Tab.Navigator
              barStyle={{ backgroundColor: 'rgb(45,77,118)' }}
              shifting={true}>
