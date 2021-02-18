@@ -36,7 +36,7 @@ export default function CursoAtual ({navigation}) {
                             description='Descrição Exemplo'
                             titleStyle={styles.textTitulo}
                             left={props =><Image style={styles.imgCurso} 
-                            source={require('../img/imgCurso.png')}/>}
+                            source={require('../img/curso.jpg')}/>}
                             />
                         </TouchableOpacity>
                        
@@ -46,7 +46,7 @@ export default function CursoAtual ({navigation}) {
                             description='Descrição Exemplo'
                             titleStyle={styles.textTitulo}
                             left={props =><Image style={styles.imgCurso} 
-                            source={require('../img/imgCurso.png')}/>}
+                            source={require('../img/curso.jpg')}/>}
                             />
                         </TouchableOpacity>
 
@@ -56,7 +56,7 @@ export default function CursoAtual ({navigation}) {
                             description='Descrição Exemplo'
                             titleStyle={styles.textTitulo}
                             left={props =><Image style={styles.imgCurso} 
-                            source={require('../img/imgCurso.png')}/>}
+                            source={require('../img/curso.jpg')}/>}
                             />
                         </TouchableOpacity>
 
@@ -66,7 +66,7 @@ export default function CursoAtual ({navigation}) {
                             description='Descrição Exemplo'
                             titleStyle={styles.textTitulo}
                             left={props =><Image style={styles.imgCurso} 
-                            source={require('../img/imgCurso.png')}/>}
+                            source={require('../img/curso.jpg')}/>}
                             />
                         </TouchableOpacity>
 
@@ -76,7 +76,7 @@ export default function CursoAtual ({navigation}) {
                             description='Descrição Exemplo'
                             titleStyle={styles.textTitulo}
                             left={props =><Image style={styles.imgCurso} 
-                            source={require('../img/imgCurso.png')}/>}
+                            source={require('../img/curso.jpg')}/>}
                             />
                         </TouchableOpacity>
 
@@ -86,7 +86,7 @@ export default function CursoAtual ({navigation}) {
                             description='Descrição Exemplo'
                             titleStyle={styles.textTitulo}
                             left={props =><Image style={styles.imgCurso} 
-                            source={require('../img/imgCurso.png')}/>}
+                            source={require('../img/curso.jpg')}/>}
                             />
                         </TouchableOpacity>
                     </View>
