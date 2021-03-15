@@ -1,114 +1,109 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import { View, Text, StyleSheet, Image,TextInput,TouchableOpacity } from 'react-native';
+import StatusBarColor from './components/StatusBarColor';
+import { IconButton } from 'react-native-paper';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MyTabs from './pages/Tabs';
+import api from './services/API'
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => React$Node = () => {
+export default function App({navigation}) {
+  const token = global.Session
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <View style={styles.backgroud}>
+
+      <StatusBarColor backgroundColor='rgb(45,77,118)' barStyle='light-content'/>
+
+      <View style={styles.nav}>
+          <Image style={styles.logo} source={require('./img/Logo2.png')}/>     
+          <IconButton 
+          icon="account-circle" color="white" style={styles.iconuser} onPress={async() =>{
+            const response = await api.get("autenticacao/encerrasessao/clinicam/"+token)
+            navigation.navigate('Login')
+          }
+            
+          } 
+          />         
+      </View>
+
+{/*       <View style={styles.viewSearch}>
+        <TextInput
+        style={styles.input}
+        placeholder="Procurar"
+        />
+          <TouchableOpacity style={styles.icon}>
+              <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={20} /> 
+          </TouchableOpacity>
+      </View> */}
+      <MyTabs/>
+
+    <View style={styles.footer}>
+        <Text>Copyright © Clinitec 2020</Text>
+    </View>
+    
+  </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
 
-export default App;
+  backgroud:{
+      width:'100%',
+      height:'100%',
+  },
+  
+  nav:{
+      alignItems:'center',
+      justifyContent: 'center',
+      backgroundColor:'rgb(45,77,118)',
+      width: '100%',
+      height:'8%' ,
+  },
+
+  logo:{
+      width:150,
+      height:100,
+      resizeMode:'contain',
+  },
+
+  iconuser:{
+      alignSelf:'flex-end',
+      position:'absolute',
+      fontSize:25,
+  },
+  viewSearch:{
+    marginTop: 0,
+    marginBottom: 0,
+    backgroundColor:'#FFF',
+    elevation:2.5,
+    borderRadius:0,
+    marginVertical: 10,
+    width: '100%',
+    flexDirection: 'row',
+    alignSelf:'center'
+  },
+
+  input:{
+    width:'90%',
+    padding:8,
+    paddingLeft:20,
+    fontSize:15,
+  },
+
+  icon:{
+    position:'absolute',
+    right: 20,
+    top: 12,
+  },
+
+  footer:{
+      alignItems:'center',
+      position:'absolute',
+      bottom:0,
+      backgroundColor:'#F1F1F1',
+      width:'100%',
+      height:'5%',
+      justifyContent:'center',
+  },
+
+});

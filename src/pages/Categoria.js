@@ -1,100 +1,254 @@
 import React from 'react';
-import { View, Text, KeyboardAvoidingView, StyleSheet, TextInput, TouchableOpacity, Image, Animated, Alert, handleLogin } from 'react-native';
-/* import StatusBarColor from '../components/StatusBarColor' */
+import { View, Text, KeyboardAvoidingView, StyleSheet, Image, ScrollView, ImageBackground, TextInput} from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { IconButton } from 'react-native-paper';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import api from '../services/API';
 
-export default function Menu ({navigation}) {
+export default function Categoria ({navigation}) {
        
     return(
         <KeyboardAvoidingView style={styles.backgroud}>
-        {/*   
-            <StatusBarColor hidden={true}/> */}
-
-            <View style={styles.centerlogo}>
+            <View style={styles.nav}>
                 <Image style={styles.logo} source={require('../img/Logo.png')}/>
+                <IconButton 
+                icon="account-circle" color="white" style={styles.iconuser} onPress={() => navigation.navigate('Login')}  />         
             </View>
 
-            <View style={styles.footer}>
-                <Text  style={styles.textfooter} >Copyright © Clinitec 2020</Text>
+            <View style={styles.viewSearch}>
+                <TextInput
+                style={styles.input}
+                placeholder="Procurar"
+                autoCorrect={false}
+                autoCapitalize="none"
+                />
+                <TouchableOpacity style={styles.icon}>
+                    <MaterialCommunityIcons name="magnify" color="rgb(45,77,118)" size={20} /> 
+                </TouchableOpacity>
             </View>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <ImageBackground source={require('../img/back2.jpg')} style={styles.backgroundImage}>
+                    <ScrollView>
+                        <Text style={styles.tituloDestaque}> Fibra Óptica </Text> 
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.scrollImage}>
+                        {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}> Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                        </ScrollView>
 
+                        <Text style={styles.tituloDestaque}> Via Rádio </Text> 
+                        
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.scrollImage}>
+
+                            {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
+                            
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+
+                        </ScrollView>
+
+                        <Text style={styles.tituloDestaque}> Redes </Text> 
+                        
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.scrollImage}>
+
+                            {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
+                            
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+
+                        </ScrollView>
+
+                        <Text style={styles.tituloDestaque}> Suporte </Text> 
+                        
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.scrollImage}>
+
+                            {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
+                            
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                                <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
+                                <Text style={styles.textArea}>Área do curso</Text>
+                                <Text style={styles.textTitulo}> Titulo Exemplo</Text>
+                                <Text style={styles.textDescricao}> Descrição Exemplo</Text>
+                            </TouchableOpacity>
+
+                        </ScrollView>
+
+                    </ScrollView>
+                </ImageBackground>
+            </View>
         </KeyboardAvoidingView>
     );
 }
 
 const styles = StyleSheet.create({
-
-linearGradient: {
-    flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15,
-},
 backgroud:{
     alignItems:'center',
     width:'100%',
     height:'100%',
 },
-
-centerlogo:{
-    alignItems:'center',
-    width: '100%',
-    height:'40%' ,
-    justifyContent:'center',
+backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover', // or 'stretch'
 },
+nav:{
+    alignItems:'center',
+    justifyContent: 'center',
+    backgroundColor:'rgb(45,77,118)',
+    width: '100%',
+    height:'8%' ,
+},
+
 logo:{
-    width:250,
+    width:150,
     height:100,
     resizeMode:'contain',
-    marginBottom:35,
 },
-botao:{
-    backgroundColor:'#FF9700',
-    width:'90%',
-    height: 35,
-    alignItems:'center',
-    justifyContent:'center',
-    borderRadius:5,
-},
-textobotao:{
-    color:'#FFF',
-    fontSize:12
-},
-textologin:{
-    textAlign:'center',
-    marginBottom:30,
-},
-inputs:{
-    position:'relative',
-    bottom:70,
-    padding:20,
-    width:'90%',
-    justifyContent:'center',
-    alignItems:'center',
-    backgroundColor:'#F1F1F1',
-    borderRadius:5,
-    marginVertical:10,
-},
-
-input:{
-    backgroundColor:'#FFF',
-    width:'90%',
-    marginBottom:15,
-    color:'#222',
-    fontSize:12,
-    borderRadius:5,
-    padding:5,
-    justifyContent:'center',
-},
-footer:{
-    alignItems:'center',
+iconuser:{
+    alignSelf:'flex-end',
     position:'absolute',
-    bottom:0,
-    width:'100%',
-    height:'10%',
-    justifyContent:'center',
+    fontSize:25,
 },
-textfooter:{
-    color:'white',
+viewSearch:{
+    marginTop: 0,
+    backgroundColor:'#FFF',
+    elevation:2.5,
+    borderRadius:0,
+    marginVertical: 10,
+    width: '100%',
+    flexDirection: 'row',
+    alignSelf:'center'
 },
+input:{
+    width:'90%',
+    padding:8,
+    paddingLeft:20,
+    fontSize:15,
+},
+icon:{
+    position:'absolute',
+    right: 20,
+    top: 10,
+},  
+curso:{
+    alignItems:'center',
+    marginRight:12,
+    marginBottom:20,
 
+},
+imgCurso:{
+    width:150,
+    height:150,
+    resizeMode:'contain',
+    borderRadius:15,
+},
+textTitulo:{
+    fontSize:15,
+    
+},
+textDescricao:{
+    fontSize:13,
+},
+textArea:{
+    fontSize:12,
+    fontWeight:'bold',
+    marginTop:-20,
+},
+tituloDestaque:{
+    fontSize:18,
+    alignSelf:'center',
+    marginTop:20,
+},
+scrollImage:{
+    marginLeft:10,
+},
 });

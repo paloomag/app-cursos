@@ -1,28 +1,18 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { View, Text, KeyboardAvoidingView, StyleSheet, Image} from 'react-native';
+import { View, Text, KeyboardAvoidingView, StyleSheet, Image, SafeAreaView} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-/* import StatusBarColor from '../components/StatusBarColor' */
 import api from '../services/API';
 import { IconButton } from 'react-native-paper';
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import MyTabs from './MyTabs';
 
 export default function Menu ({navigation}) {
        
     return(
-        <KeyboardAvoidingView style={styles.backgroud}>
-        {/*   
-            <StatusBarColor hidden={true}/> */}
-
-        <View style={styles.nav}>
-          <Image style={styles.logo} source={require('../img/Logo.png')}/>     
-          <IconButton 
-          icon="camera" color="white" style={styles.iconuser} />         
-        </View>
-            <View style={styles.footer}>
-                <Text  style={styles.textfooter} >Copyright © Clinitec 2020</Text>
-            </View>
-
-        </KeyboardAvoidingView>
+        <SafeAreaView style={styles.backgroud}>
+            <MyTabs/>
+        </SafeAreaView>
     );
 }
 
@@ -50,18 +40,26 @@ const styles = StyleSheet.create({
         alignSelf:'flex-end',
         position:'absolute',
         fontSize:25,
-    },  
-    footer:{
-        alignItems:'center',
-        position:'absolute',
-        bottom:0,
-        backgroundColor:'#F1F1F1',
-        width:'100%',
-        height:'5%',
-        justifyContent:'center',
     },
-textfooter:{
-    color:'white',
-},
-
+    viewSearch:{
+        marginTop: 0,
+        backgroundColor:'#FFF',
+        elevation:2.5,
+        borderRadius:0,
+        marginVertical: 10,
+        width: '100%',
+        flexDirection: 'row',
+        alignSelf:'center'
+    },
+    input:{
+        width:'90%',
+        padding:8,
+        paddingLeft:20,
+        fontSize:15,
+    },
+    icon:{
+        position:'absolute',
+        right: 20,
+        top: 10,
+    },  
 });
