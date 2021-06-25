@@ -37,8 +37,10 @@ export default function CursoAtual ({navigation}) {
                             left={props =><Image style={styles.imgCurso} 
                             source={require('../img/imgCurso.png')}/>}
                             />
-                        <TouchableOpacity  onPress={() => navigation.navigate('CompraAPI')}>
-                            
+                        <TouchableOpacity 
+                            style={styles.botao}
+                            onPress={() => navigation.navigate('compraAPI')} >
+                            <Text style={styles.textobotao}>Comprar</Text>
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
