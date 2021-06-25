@@ -30,14 +30,15 @@ export default function CursoAtual ({navigation}) {
                 <Text style={styles.tituloDestaque}> Compre e assista em qualquer lugar, a qualquer hora! </Text> 
                 <ScrollView>
                     <View style={styles.list}>
-                        <TouchableOpacity  onPress={() => navigation.navigate('Curso')}>
-                            <List.Item
+                        <List.Item
                             title='Titulo Exemplo'
                             description='Descrição Exemplo'
                             titleStyle={styles.textTitulo}
                             left={props =><Image style={styles.imgCurso} 
                             source={require('../img/imgCurso.png')}/>}
                             />
+                        <TouchableOpacity  onPress={() => navigation.navigate('CompraAPI')}>
+                            
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
