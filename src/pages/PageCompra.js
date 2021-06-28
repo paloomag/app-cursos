@@ -5,7 +5,7 @@ import { IconButton, List } from 'react-native-paper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import api from '../services/API';
 
-export default function CursoAtual ({navigation}) {
+export default function PageCompra ({navigation}) {
        
     return(
         <KeyboardAvoidingView style={styles.backgroud}>
@@ -135,5 +135,17 @@ btncenter:{
     alignContent:'center',
     justifyContent:'center',
     alignSelf:'center',
+},
+botao:{
+    backgroundColor:'rgb(45,77,118)',
+    width:'100%',
+    height: 35,
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius:5,
+},
+textobotao:{
+    color:'#FFF',
+    fontSize:14
 },
 });

@@ -8,6 +8,7 @@ import Curso from '../pages/Curso';
 import Categoria from '../pages/Categoria';
 import MyTabs from '../pages/MyTabs';
 import Loading from '../pages/Loading';
+import PageCompra from '../pages/PageCompra';
 
 export default function Routes() {
     const Stack = createStackNavigator();
@@ -20,6 +21,7 @@ export default function Routes() {
                 <Stack.Screen name="Categoria" component={Categoria}/>
                 <Stack.Screen name="MyTabs" component={MyTabs}/>
                 <Stack.Screen name="Loading" component={Loading}/>
+                <Stack.Screen name="PageCompra" component={PageCompra}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

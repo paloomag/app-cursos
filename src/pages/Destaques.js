@@ -33,31 +33,31 @@ export default function Destaque ({navigation}) {
                     
                         {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
                         
-                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')} >
+                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('PageCompra')} >
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
                             <Text style={styles.textDescricao}> Descrição Exemplo</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.curso}  onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso}  onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
                             <Text style={styles.textDescricao}> Descrição Exemplo</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.curso}  onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso}  onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
                             <Text style={styles.textDescricao}> Descrição Exemplo</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
                             <Text style={styles.textDescricao}> Descrição Exemplo</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
@@ -71,25 +71,25 @@ export default function Destaque ({navigation}) {
 
                         {/* FLATLIST COM API DISPONIBILIZADA PELA CLINITEC */}
                         
-                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
                             <Text style={styles.textDescricao}> Descrição Exemplo</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
                             <Text style={styles.textDescricao}> Descrição Exemplo</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
                             <Text style={styles.textDescricao}> Descrição Exemplo</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('Curso')}>
+                        <TouchableOpacity style={styles.curso} onPress={() => navigation.navigate('PageCompra')}>
                             <Image style={styles.imgCurso} source={require('../img/imgCurso.png')}/>
                             <Text style={styles.textArea}>Área do curso</Text>
                             <Text style={styles.textTitulo}> Titulo Exemplo</Text>
