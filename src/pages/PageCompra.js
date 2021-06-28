@@ -53,7 +53,6 @@ export default function PageCompra ({navigation}) {
         </KeyboardAvoidingView>
     );
 }
-
 const styles = StyleSheet.create({
 backgroud:{
     width:'100%',

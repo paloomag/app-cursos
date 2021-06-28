@@ -57,7 +57,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>2</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -65,7 +65,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>3</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -73,7 +73,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>4</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -81,7 +81,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>5</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -89,7 +89,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>6</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -97,7 +97,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>7</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -105,7 +105,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>8</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -113,7 +113,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>9</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -121,7 +121,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>10</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -129,7 +129,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>11</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -137,7 +137,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>12</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'
@@ -145,7 +145,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>13</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
 
                 </ScrollView>
