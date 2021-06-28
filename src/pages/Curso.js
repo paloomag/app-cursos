@@ -49,7 +49,7 @@ export default function Curso ({navigation}) {
                     style={styles.itemList}
                     titleStyle={styles.textTitulo}
                     left={props =><Text style={styles.numberList}>1</Text>}
-                    right={props =><TouchableOpacity style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
+                    right={props =><TouchableOpacity onPress={() => navigation.navigate('Download')} style={styles.iconList}><MaterialCommunityIcons name="arrow-down-bold-circle" color="rgb(45,77,118)" size={26} /></TouchableOpacity> }
                     />
                     <List.Item
                     title='Titulo Exemplo'

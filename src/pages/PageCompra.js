@@ -39,7 +39,7 @@ export default function PageCompra ({navigation}) {
                             />
                         <TouchableOpacity 
                             style={styles.botao}
-                            onPress={() => navigation.navigate('compraAPI')} >
+                            onPress={() => navigation.navigate('Curso')} >
                             <Text style={styles.textobotao}>Comprar</Text>
                         </TouchableOpacity>
                     </View>

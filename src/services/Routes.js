@@ -9,6 +9,7 @@ import Categoria from '../pages/Categoria';
 import MyTabs from '../pages/MyTabs';
 import Loading from '../pages/Loading';
 import PageCompra from '../pages/PageCompra';
+import Download from '../pages/Download';
 
 export default function Routes() {
     const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ export default function Routes() {
                 <Stack.Screen name="MyTabs" component={MyTabs}/>
                 <Stack.Screen name="Loading" component={Loading}/>
                 <Stack.Screen name="PageCompra" component={PageCompra}/>
+                <Stack.Screen name="Download" component={Download}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
