@@ -37,10 +37,15 @@ export default function PageCompra ({navigation}) {
                             left={props =><Image style={styles.imgCurso} 
                             source={require('../img/imgCurso.png')}/>}
                             />
-                        <TouchableOpacity 
+                        <TouchableOpacity
                             style={styles.botao}
-                            onPress={() => navigation.navigate('Curso')} >
+                            onPress={() => navigation.navigate('CompraApi')} >
                             <Text style={styles.textobotao}>Comprar</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.botao}
+                            onPress={() => navigation.navigate('CursoAmostra')} >
+                            <Text style={styles.textobotao}>Assistir</Text>
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
@@ -138,11 +143,13 @@ btncenter:{
 },
 botao:{
     backgroundColor:'rgb(45,77,118)',
-    width:'100%',
-    height: 35,
+    width:'90%',
+    height:35,
     alignItems:'center',
     justifyContent:'center',
+    alignSelf:'center',
     borderRadius:5,
+    marginTop:5,
 },
 textobotao:{
     color:'#FFF',

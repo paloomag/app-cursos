@@ -10,6 +10,9 @@ import MyTabs from '../pages/MyTabs';
 import Loading from '../pages/Loading';
 import PageCompra from '../pages/PageCompra';
 import Download from '../pages/Download';
+import AmostraGratis from '../pages/AmostraGratis';
+import CursoAmostra from '../pages/CursoAmostra';
+import CompraApi from '../pages/CompraApi';
 
 export default function Routes() {
     const Stack = createStackNavigator();
@@ -19,11 +22,14 @@ export default function Routes() {
                 <Stack.Screen name="Menu" component={Menu}/>
                 <Stack.Screen name="Login" component={Login}/>
                 <Stack.Screen name="Curso" component={Curso}/>
+                <Stack.Screen name="CursoAmostra" component={CursoAmostra}/>
                 <Stack.Screen name="Categoria" component={Categoria}/>
                 <Stack.Screen name="MyTabs" component={MyTabs}/>
                 <Stack.Screen name="Loading" component={Loading}/>
                 <Stack.Screen name="PageCompra" component={PageCompra}/>
                 <Stack.Screen name="Download" component={Download}/>
+                <Stack.Screen name="CompraApi" component={CompraApi}/>
+                <Stack.Screen name="AmostraGratis" component={AmostraGratis}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
