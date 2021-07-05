@@ -11,7 +11,7 @@ export default function Menu ({navigation}) {
        
     return(
         <SafeAreaView style={styles.backgroud}>
-            <MyTabs/>
+            {/* Menu Cliente  */}<MyTabs/>
         </SafeAreaView>
     );
 }
