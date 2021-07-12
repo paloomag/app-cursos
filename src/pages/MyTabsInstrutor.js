@@ -5,8 +5,6 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import Destaques from './Destaques';
 import CursoAtual from './CursoAtual';
 import Categoria from './Categoria';
-import { IconButton } from 'react-native-paper';
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createMaterialBottomTabNavigator();
